@@ -1,0 +1,146 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --container-width: 1270px;
+  --container-padding: 15px;
+  --secondary: rgba(15, 31, 28, 0.5);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f6f6;
+  color: #0f1f1c;
+}
+
+.none {
+  display: none !important;
+}
+
+.container {
+  max-width: var(--container-width);
+  padding: var(--container-padding);
+  margin: 0 auto;
+}
+
+.container-right {
+  padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+.container-left {
+  padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+}
+
+.block {
+  height: 200px;
+  background-color: darkseagreen;
+}
+
+/* Header */
+
+.header {
+  position: relative;
+  min-height: 940px;
+  padding-top: 44px;
+  background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434;
+  color: #ffffff;
+}
+
+.header a {
+  color: #fff;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 96px;
+
+  background-image: url('./../img/header/header-bottom.svg');
+  background-size: 100%;
+}
+
+.header__top {
+  margin-bottom: 86px;
+}
+
+.header__content {
+  max-width: 592px;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 80px;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 80px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav__list a {
+  position: relative;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 10px;
+  bottom: -6px;
+  display: block;
+  height: 4px;
+  background-color: #c4c4c4;
+  border-radius: 50px;
+}
+
+.nav__login {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.logo a {
+  color: inherit;
+}
+
+/* Button */
+
+.btn {
+  display: inline-block;
+  padding: 13px 44px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  color: #ecba13;
+  transition: color 0.2s ease-in;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
