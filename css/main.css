@@ -241,6 +241,11 @@ body {
 
 /* Slider */
 
+.owl-item {
+  display: flex;
+  justify-content: center;
+}
+
 .slider {
   position: relative;
   height: 456px;
@@ -580,12 +585,20 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .nav__list {
+  .nav__list--header {
     display: none;
   }
 
-  .nav__login {
+  .nav__login--header {
     display: none;
+  }
+
+  .nav {
+    column-gap: 50px;
+  }
+
+  .nav__list {
+    column-gap: 50px;
   }
 
   .nav__toggle {
@@ -735,21 +748,6 @@ body {
     width: 100%;
   }
 
-  /* .slider {
-    height: 304px;
-  }
-  .slider .slider__item {
-    margin-top: 18px;
-    width: 223px;
-    height: 268px;
-  }
-
-  .slider .center .slider__item {
-    margin-top: 0;
-    width: 253px;
-    height: 304px;
-  } */
-
   .slider__btn--prev {
     left: -15px;
   }
@@ -779,6 +777,13 @@ body {
     font-size: 18px;
   }
 
+  .btn--login {
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+  }
+
   /* Customers */
 
   .customers {
@@ -786,8 +791,7 @@ body {
   }
 
   .customers__row {
-    row-gap: 30px;
-    flex-direction: column-reverse;
+    column-gap: 30px;
   }
 
   .customers__title {
@@ -824,7 +828,7 @@ body {
   }
 
   .customers__img img {
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 40px;
   }
 
@@ -849,9 +853,71 @@ body {
     padding: 20px 15px;
     border-radius: 40px;
   }
+
+  /* Subscribe */
+  .subscribe {
+    padding: 25px 0 30px;
+  }
+
+  .subscribe__title {
+    margin-bottom: 30px;
+    font-size: 35px;
+  }
+
+  .subscribe-form {
+    padding: 10px 10px 10px 20px;
+    border-radius: 25px;
+    column-gap: 10px;
+  }
+
+  .subscribe-form__input {
+    font-size: 20px;
+  }
+
+  /* Footer */
+  .nav__login--footer {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .customers__row {
+    row-gap: 30px;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav--footer {
+    flex-direction: column-reverse;
+    row-gap: 30px;
+  }
 }
 
 @media (max-width: 460px) {
+  .customers__img img {
+    max-width: 100%;
+  }
+
+  .subscribe-form {
+    padding: 10px;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .subscribe-form__input {
+    padding: 15px 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 18px;
+  }
+
+  .nav__list--footer {
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+  }
   .nav--mobile .nav__toggle {
     top: 20px;
     right: 15px;
