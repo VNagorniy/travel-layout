@@ -4,9 +4,22 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
   center: true,
   loop: true,
-  margin: 30,
+  margin: 20,
   startPosition: 1,
   items: 3,
+  responsive: {
+    850: {
+      startPosition: 1,
+      items: 3,
+    },
+    1000: {
+      margin: 20,
+      items: 2,
+    },
+    1200: {
+      margin: 30,
+    },
+  },
 });
 
 $('.slider__btn--prev').click(function () {
@@ -26,4 +39,5 @@ const menuIcon = document.querySelector('.menu-icon');
 navBtn.onclick = function () {
   nav.classList.toggle('nav--mobile');
   menuIcon.classList.toggle('menu-icon--active');
+  document.body.classList.toggle('no-scroll');
 };
