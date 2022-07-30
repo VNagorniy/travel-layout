@@ -778,6 +778,77 @@ body {
     border-radius: 20px;
     font-size: 18px;
   }
+
+  /* Customers */
+
+  .customers {
+    padding: 50px 0 60px;
+  }
+
+  .customers__row {
+    row-gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  .customers__title {
+    margin-bottom: 25px;
+    font-size: 35px;
+  }
+
+  .review__client {
+    column-gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  .review__client-avatar {
+    height: 80px;
+    width: 80px;
+  }
+
+  .review__client-desc-name {
+    margin-bottom: 5px;
+    font-size: 23px;
+  }
+
+  .review__client-desc-country {
+    font-size: 18px;
+  }
+
+  .review__text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .review__rating {
+    max-width: 200px;
+  }
+
+  .customers__img img {
+    max-width: 300px;
+    border-radius: 40px;
+  }
+
+  /* CTA */
+
+  .cta {
+    padding: 50px 0;
+  }
+
+  .cta__title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .cta__text {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .cta__plate {
+    min-height: 380px;
+    padding: 20px 15px;
+    border-radius: 40px;
+  }
 }
 
 @media (max-width: 460px) {
